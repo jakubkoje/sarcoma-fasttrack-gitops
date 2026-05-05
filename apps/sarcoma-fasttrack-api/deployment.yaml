@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sarcoma-fasttrack-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod: sarcoma-fasttrack-api
+  template:
+    metadata:
+      labels:
+        pod: sarcoma-fasttrack-api
+    spec:
+      containers:
+        - name: sarcoma-fasttrack-api
+          image: jakubkoje/sarcoma-fasttrack-api:latest
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8000
+          env:
+            - name: PORT
+              value: "8000"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 2
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 20
+          resources:
+            requests:
+              memory: "16Mi"
+              cpu: "0.01"
+            limits:
+              memory: "64Mi"
+              cpu: "0.1"

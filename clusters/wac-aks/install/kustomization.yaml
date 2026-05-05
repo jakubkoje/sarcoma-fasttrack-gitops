@@ -1,0 +1,31 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: wac-hospital
+
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: wac-hospital
+      app.kubernetes.io/name: sarcoma-fasttrack
+      wac-fiit.github.io/project: sarcoma-fasttrack
+    includeSelectors: true
+    includeTemplates: true
+
+resources:
+  - ../../../apps/sarcoma-fasttrack-api
+  - ../../../apps/sarcoma-fasttrack-frontend
+
+components:
+  - ../../../apps/sarcoma-fasttrack-api/components/with-gateway-api
+  - ../../../components/version-release
+
+patches:
+  - target:
+      group: polyfea.github.io
+      version: v1alpha1
+      kind: WebComponent
+      name: sarcoma-fasttrack-content
+    patch: |-
+      - op: replace
+        path: /spec/attributes/0/value
+        value: /sarcoma-fasttrack-api

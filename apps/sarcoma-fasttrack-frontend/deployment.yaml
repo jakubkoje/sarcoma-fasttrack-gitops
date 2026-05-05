@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sarcoma-fasttrack-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod: sarcoma-fasttrack-frontend
+  template:
+    metadata:
+      labels:
+        pod: sarcoma-fasttrack-frontend
+    spec:
+      containers:
+        - name: sarcoma-fasttrack-frontend
+          image: jakubkoje/sarcoma-fasttrack-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8080
+          resources:
+            requests:
+              memory: "16Mi"
+              cpu: "0.01"
+            limits:
+              memory: "64Mi"
+              cpu: "0.1"

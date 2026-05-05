@@ -1,0 +1,14 @@
+apiVersion: polyfea.github.io/v1alpha1
+kind: WebComponent
+metadata:
+  name: sarcoma-fasttrack-content
+spec:
+  microFrontend: sarcoma-fasttrack-frontend
+  element: sarcoma-fasttrack-app
+  attributes:
+    - name: api-base
+      value: http://localhost:8000
+  displayRules:
+    - allOf:
+        - context-name: main-content
+        - path: "^((\\.?/)?|/fea/)?sarcoma-fasttrack(/.*)?$"

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-express
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod: mongo-express
+  template:
+    metadata:
+      labels:
+        pod: mongo-express
+    spec:
+      containers:
+        - name: mongo-express
+          image: mongo-express:1
+          imagePullPolicy: Always
+          env:
+            - name: ME_CONFIG_SITE_BASEURL
+              value: /mongo-express/
+            - name: ME_CONFIG_MONGODB_URL
+              value: mongodb://mongodb:27017
+            - name: ME_CONFIG_BASICAUTH_USERNAME
+              value: ""
+            - name: ME_CONFIG_BASICAUTH_PASSWORD
+              value: ""
+            - name: ME_CONFIG_BASICAUTH
+              value: "false"
+          ports:
+            - name: http
+              containerPort: 8081
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "0.01"
+            limits:
+              memory: "512Mi"
+              cpu: "1"

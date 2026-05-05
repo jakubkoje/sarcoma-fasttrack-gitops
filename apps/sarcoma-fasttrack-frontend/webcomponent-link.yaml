@@ -1,0 +1,24 @@
+apiVersion: polyfea.github.io/v1alpha1
+kind: WebComponent
+metadata:
+  name: sarcoma-fasttrack-link
+spec:
+  microFrontend: polyfea-md-shell
+  element: polyfea-md-app
+  attributes:
+    - name: headline
+      value: Sarcoma FastTrack
+    - name: short-headline
+      value: FastTrack
+    - name: supporting-text
+      value: Minimal early deployment frontend connected to a backend.
+    - name: material-icon
+      value: health_and_safety
+    - name: href
+      value: ./sarcoma-fasttrack
+  priority: 20
+  displayRules:
+    - anyOf:
+        - context-name: applications
+        - context-name: rail-content
+        - context-name: drawer-content
