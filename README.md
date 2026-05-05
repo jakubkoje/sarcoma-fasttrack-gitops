@@ -25,8 +25,8 @@ kubectl kustomize clusters/wac-aks
 Build images locally:
 
 ```bash
-docker build -t jakubkoje/sarcoma-fasttrack-api:latest ../sarcoma-fasttrack-api
-docker build -t jakubkoje/sarcoma-fasttrack-frontend:latest ../sarcoma-fasttrack-frontend
+docker build -t xjelinekj/sarcoma-fasttrack-api:latest ../sarcoma-fasttrack-api
+docker build -t xjelinekj/sarcoma-fasttrack-frontend:latest ../sarcoma-fasttrack-frontend
 ```
 
 Apply locally when Polyfea and Envoy Gateway should be installed too:

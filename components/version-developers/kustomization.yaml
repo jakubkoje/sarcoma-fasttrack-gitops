@@ -2,9 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
 
 images:
-  - name: jakubkoje/sarcoma-fasttrack-api
-    newName: jakubkoje/sarcoma-fasttrack-api # {"$imagepolicy": "wac-hospital:sarcoma-fasttrack-api:name"}
+  - name: xjelinekj/sarcoma-fasttrack-api
+    newName: xjelinekj/sarcoma-fasttrack-api # {"$imagepolicy": "wac-hospital:sarcoma-fasttrack-api:name"}
     newTag: latest # {"$imagepolicy": "wac-hospital:sarcoma-fasttrack-api:tag"}
-  - name: jakubkoje/sarcoma-fasttrack-frontend
-    newName: jakubkoje/sarcoma-fasttrack-frontend # {"$imagepolicy": "wac-hospital:sarcoma-fasttrack-frontend:name"}
+  - name: xjelinekj/sarcoma-fasttrack-frontend
+    newName: xjelinekj/sarcoma-fasttrack-frontend # {"$imagepolicy": "wac-hospital:sarcoma-fasttrack-frontend:name"}
     newTag: latest # {"$imagepolicy": "wac-hospital:sarcoma-fasttrack-frontend:tag"}

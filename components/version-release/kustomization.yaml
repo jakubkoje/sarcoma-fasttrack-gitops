@@ -2,9 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
 
 images:
-  - name: jakubkoje/sarcoma-fasttrack-api
-    newName: jakubkoje/sarcoma-fasttrack-api
+  - name: xjelinekj/sarcoma-fasttrack-api
+    newName: xjelinekj/sarcoma-fasttrack-api
     newTag: 1.0.0
-  - name: jakubkoje/sarcoma-fasttrack-frontend
-    newName: jakubkoje/sarcoma-fasttrack-frontend
+  - name: xjelinekj/sarcoma-fasttrack-frontend
+    newName: xjelinekj/sarcoma-fasttrack-frontend
     newTag: 1.0.0

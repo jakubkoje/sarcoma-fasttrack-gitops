@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: sarcoma-fasttrack-api
-          image: jakubkoje/sarcoma-fasttrack-api:latest
+          image: xjelinekj/sarcoma-fasttrack-api:latest
           imagePullPolicy: Always
           ports:
             - name: http
