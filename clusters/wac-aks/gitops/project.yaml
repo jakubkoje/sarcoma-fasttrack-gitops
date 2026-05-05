@@ -5,7 +5,7 @@ metadata:
 spec:
   title: "Sarcoma FastTrack"
   description: "Minimal early deployment setup with frontend-backend communication."
-  authors: "Jakub Koje, Peter Hubina"
+  authors: "Jakub Jelínek, Peter Hubina"
   azureLink: "https://wac-hospital.westeurope.cloudapp.azure.com/fea/sarcoma-fasttrack"
   frontendRepoUrl: "https://github.com/jakubkoje/sarcoma-fasttrack-frontend"
   backendRepoUrl: "https://github.com/jakubkoje/sarcoma-fasttrack-api"
