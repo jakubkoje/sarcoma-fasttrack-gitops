@@ -4,7 +4,7 @@ kind: Component
 images:
   - name: xjelinekj/sarcoma-fasttrack-api
     newName: xjelinekj/sarcoma-fasttrack-api
-    newTag: 1.0.0
+    newTag: 1.1.0
   - name: xjelinekj/sarcoma-fasttrack-frontend
     newName: xjelinekj/sarcoma-fasttrack-frontend
-    newTag: 1.0.1
+    newTag: 1.1.0
