@@ -20,19 +20,21 @@ spec:
             - name: http
               containerPort: 8000
           env:
-            - name: PORT
+            - name: SARCOMA_API_ENVIRONMENT
+              value: production
+            - name: SARCOMA_API_PORT
               value: "8000"
           readinessProbe:
             httpGet:
-              path: /health
+              path: /health/db
               port: http
-            initialDelaySeconds: 2
+            initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
             httpGet:
-              path: /health
+              path: /health/db
               port: http
-            initialDelaySeconds: 5
+            initialDelaySeconds: 10
             periodSeconds: 20
           resources:
             requests:

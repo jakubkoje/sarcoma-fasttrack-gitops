@@ -31,7 +31,20 @@ spec:
           urlRewrite:
             path:
               type: ReplaceFullPath
-              replaceFullPath: /health
+              replaceFullPath: /health/db
+      backendRefs:
+        - name: sarcoma-fasttrack-api
+          port: 80
+    - matches:
+        - path:
+            type: Exact
+            value: /sarcoma-fasttrack-api/health/db
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplaceFullPath
+              replaceFullPath: /health/db
       backendRefs:
         - name: sarcoma-fasttrack-api
           port: 80
