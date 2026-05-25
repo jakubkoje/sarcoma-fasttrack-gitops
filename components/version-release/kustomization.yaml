@@ -4,10 +4,10 @@ kind: Component
 images:
   - name: xjelinekj/sarcoma-fasttrack-api
     newName: xjelinekj/sarcoma-fasttrack-api
-    newTag: 1.1.0
+    newTag: 1.1.1
   - name: xjelinekj/sarcoma-fasttrack-frontend
     newName: xjelinekj/sarcoma-fasttrack-frontend
-    newTag: 1.1.13
+    newTag: 1.1.14
 
 patches:
   - target:
@@ -18,4 +18,4 @@ patches:
     patch: |-
       - op: replace
         path: /spec/cacheBustingHash
-        value: 1.1.13
+        value: 1.1.14
