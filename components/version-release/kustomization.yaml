@@ -7,4 +7,15 @@ images:
     newTag: 1.1.0
   - name: xjelinekj/sarcoma-fasttrack-frontend
     newName: xjelinekj/sarcoma-fasttrack-frontend
-    newTag: 1.1.7
+    newTag: 1.1.8
+
+patches:
+  - target:
+      group: polyfea.github.io
+      version: v1alpha1
+      kind: MicroFrontend
+      name: sarcoma-fasttrack-frontend
+    patch: |-
+      - op: replace
+        path: /spec/cacheBustingHash
+        value: 1.1.8

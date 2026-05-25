@@ -8,3 +8,14 @@ images:
   - name: xjelinekj/sarcoma-fasttrack-frontend
     newName: xjelinekj/sarcoma-fasttrack-frontend # {"$imagepolicy": "wac-hospital:sarcoma-fasttrack-frontend:name"}
     newTag: latest # {"$imagepolicy": "wac-hospital:sarcoma-fasttrack-frontend:tag"}
+
+patches:
+  - target:
+      group: polyfea.github.io
+      version: v1alpha1
+      kind: MicroFrontend
+      name: sarcoma-fasttrack-frontend
+    patch: |-
+      - op: replace
+        path: /spec/cacheBustingHash
+        value: latest
