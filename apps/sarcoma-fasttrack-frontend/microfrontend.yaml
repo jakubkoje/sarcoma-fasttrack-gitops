@@ -4,6 +4,7 @@ metadata:
   name: sarcoma-fasttrack-frontend
 spec:
   frontendClass: md-shell
+  cacheBustingHash: 1.1.7
   service:
     name: sarcoma-fasttrack-frontend
   modulePath: sarcoma-fasttrack.js
