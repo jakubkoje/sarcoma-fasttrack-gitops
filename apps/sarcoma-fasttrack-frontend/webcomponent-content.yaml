@@ -7,7 +7,7 @@ spec:
   element: sarcoma-fasttrack-app
   attributes:
     - name: api-base
-      value: http://localhost:8000
+      value: /sarcoma-fasttrack-api
   displayRules:
     - allOf:
         - context-name: main-content
