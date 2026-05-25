@@ -7,7 +7,7 @@ images:
     newTag: 1.1.0
   - name: xjelinekj/sarcoma-fasttrack-frontend
     newName: xjelinekj/sarcoma-fasttrack-frontend
-    newTag: 1.1.12
+    newTag: 1.1.13
 
 patches:
   - target:
@@ -18,4 +18,4 @@ patches:
     patch: |-
       - op: replace
         path: /spec/cacheBustingHash
-        value: 1.1.12
+        value: 1.1.13
