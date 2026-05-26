@@ -11,7 +11,7 @@ spec:
     - name: short-headline
       value: FastTrack
     - name: supporting-text
-      value: Minimal early deployment frontend connected to a backend.
+      value: Sarcoma referral workflow with reports, centers, and educational materials.
     - name: material-icon
       value: health_and_safety
     - name: href

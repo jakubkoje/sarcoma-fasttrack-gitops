@@ -4,7 +4,7 @@ metadata:
   name: sarcoma-fasttrack
 spec:
   title: "Sarcoma FastTrack"
-  description: "Minimal early deployment setup with frontend-backend communication."
+  description: "Sarcoma referral workflow for clinicians and specialized centers. Supports case reports, articles, and center management."
   authors: "Jakub Jelínek, Peter Hubina"
   azureLink: "https://wac-hospital.westeurope.cloudapp.azure.com/fea/sarcoma-fasttrack"
   frontendRepoUrl: "https://github.com/jakubkoje/sarcoma-fasttrack-frontend"
